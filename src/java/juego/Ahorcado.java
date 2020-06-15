@@ -69,7 +69,6 @@ public class Ahorcado extends HttpServlet {
                 nivel = 1;
         }
         // Integer.parseInt((String) sesion.getAttribute("diff"));
-
         emf = Persistence.createEntityManagerFactory("juegoPU");
         PalabrasJpaController p = new PalabrasJpaController(utx, emf);
         List<Palabras> lista = p.getNivel(tipoPregunta, nivel);
